@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Homework3</string>
 
-    <string name="hello_world">App is up</string>
+    <string name="textview">App is up</string>
     <string name="action_settings">Settings</string>
 </resources>
