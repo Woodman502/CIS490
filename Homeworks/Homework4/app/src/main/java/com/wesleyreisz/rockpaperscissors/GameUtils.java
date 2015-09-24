@@ -1,12 +1,13 @@
 package com.wesleyreisz.rockpaperscissors;
 
-import android.content.res.ColorStateList;
 import android.graphics.Color;
 
 import com.wesleyreisz.rockpaperscissors.Game.GameType;
+import com.wesleyreisz.rockpaperscissors.Game.Lizard;
 import com.wesleyreisz.rockpaperscissors.Game.Paper;
 import com.wesleyreisz.rockpaperscissors.Game.Rock;
 import com.wesleyreisz.rockpaperscissors.Game.Scissors;
+import com.wesleyreisz.rockpaperscissors.Game.Spock;
 
 import java.util.Random;
 
@@ -18,27 +19,36 @@ public class GameUtils {
     public static final String LOSES_TO = "loses to";
     public static final String TIES = "ties";
 
-    public static Integer getComputerChoice(){
+    public static Integer getComputerChoice() {
         Integer selectedValue;
         Random r = new Random(System.currentTimeMillis());
 
-        selectedValue = r.nextInt(3);//
-        if(selectedValue==0){
+        selectedValue = r.nextInt(5);//
+        if (selectedValue == 0) {
             return R.id.btnRock;
-        }else if (selectedValue==1){
+        } else if (selectedValue == 1) {
             return R.id.btnPaper;
-        }else{
+        } else if (selectedValue == 2) {
             return R.id.btnScissors;
+        } else if (selectedValue == 3) {
+            return R.id.btnLizard;
+        } else {
+            return R.id.btnSpock;
         }
     }
+
 
     public static Integer convertButtonToImage(Integer buttonChoice) {
         if(buttonChoice==R.id.btnRock){
             return R.drawable.rock;
-        }else if (buttonChoice==R.id.btnPaper){
+        }else if (buttonChoice==R.id.btnPaper) {
             return R.drawable.paper;
-        }else{
+        }else if(buttonChoice==R.id.btnScissors){
             return R.drawable.scissors;
+        }else if (buttonChoice==R.id.btnLizard){
+                return R.drawable.lizard;
+        }else{
+            return R.drawable.spock;
         }
     }
 
@@ -49,8 +59,12 @@ public class GameUtils {
             gameType = new Rock();
         }else if  (playerSelectedChoice==R.id.btnPaper){
             gameType = new Paper();
-        }else{
+        }else if (playerSelectedChoice==R.id.btnScissors){
             gameType = new Scissors();
+        } else if (playerSelectedChoice==R.id.btnLizard){
+            gameType = new Lizard();
+        } else {
+            gameType = new Spock();
         }
         return gameType.eval(computerSelectedChoice);
     }
