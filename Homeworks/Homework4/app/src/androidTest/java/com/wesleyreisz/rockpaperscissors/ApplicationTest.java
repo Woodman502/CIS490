@@ -43,5 +43,23 @@ public class ApplicationTest extends ApplicationTestCase<Application> {
 
         Assert.assertNotSame(GameUtils.BEATS,GameUtils.evaluateWinner(player,R.id.btnPaper));
     }
+    public void testLizard(){
+        Integer player = R.id.btnLizard;
+
+        Assert.assertEquals(GameUtils.TIES,GameUtils.evaluateWinner(player,R.id.btnPaper));
+        Assert.assertEquals(GameUtils.LOSES_TO,GameUtils.evaluateWinner(player, R.id.btnScissors));
+        Assert.assertEquals(GameUtils.BEATS,GameUtils.evaluateWinner(player,R.id.btnRock));
+
+        Assert.assertNotSame(GameUtils.BEATS,GameUtils.evaluateWinner(player,R.id.btnLizard));
+    }
+    public void testSpock(){
+        Integer player = R.id.btnSpock;
+
+        Assert.assertEquals(GameUtils.TIES,GameUtils.evaluateWinner(player,R.id.btnPaper));
+        Assert.assertEquals(GameUtils.LOSES_TO,GameUtils.evaluateWinner(player, R.id.btnScissors));
+        Assert.assertEquals(GameUtils.BEATS,GameUtils.evaluateWinner(player,R.id.btnRock));
+
+        Assert.assertNotSame(GameUtils.BEATS,GameUtils.evaluateWinner(player,R.id.btnSpock));
+    }
 
 }

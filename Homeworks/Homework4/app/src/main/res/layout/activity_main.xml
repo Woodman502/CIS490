@@ -34,5 +34,22 @@
         android:src="@drawable/scissors"
         android:layout_below="@id/btnPaper"
         />
-
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLizard"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/lizard"
+        android:layout_below="@id/btnPaper"
+        />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSpock"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/spock"
+        android:layout_below="@id/btnPaper"
+        />
 </RelativeLayout>
