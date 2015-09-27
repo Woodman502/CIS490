@@ -3,11 +3,13 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:scrollbars="vertical">
+
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:id="@+id/btnPaper"
         android:backgroundTint="@android:color/transparent"
         android:layout_centerHorizontal="true"
@@ -16,8 +18,8 @@
         />
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:id="@+id/btnRock"
         android:backgroundTint="@android:color/transparent"
         android:layout_centerHorizontal="true"
@@ -26,8 +28,8 @@
         />
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:id="@+id/btnScissors"
         android:backgroundTint="@android:color/transparent"
         android:layout_centerHorizontal="true"
@@ -35,8 +37,8 @@
         android:layout_below="@id/btnPaper"
         />
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:id="@+id/btnLizard"
         android:backgroundTint="@android:color/transparent"
         android:layout_centerHorizontal="true"
@@ -45,8 +47,8 @@
 
         />
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:id="@+id/btnSpock"
         android:backgroundTint="@android:color/transparent"
         android:layout_centerHorizontal="true"
@@ -54,4 +56,6 @@
         android:layout_above="@id/btnRock"
 
         />
+
 </RelativeLayout>
+
