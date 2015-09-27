@@ -10,9 +10,9 @@ public class Paper implements GameType {
 
     @Override
     public String eval(Integer opponentChoice) {
-        if (opponentChoice== R.id.btnRock){
+        if (opponentChoice== R.id.btnRock || opponentChoice == R.id.btnSpock){
             return GameUtils.BEATS;
-        }else if (opponentChoice==R.id.btnScissors){
+        }else if (opponentChoice==R.id.btnScissors|| opponentChoice == R.id.btnLizard){
             return GameUtils.LOSES_TO;
         }
         else{

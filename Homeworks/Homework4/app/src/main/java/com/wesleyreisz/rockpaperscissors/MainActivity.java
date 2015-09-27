@@ -27,9 +27,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ImageButton scissors = (ImageButton)findViewById(R.id.btnScissors);
         scissors.setOnClickListener(this);
         ImageButton lizard = (ImageButton)findViewById(R.id.btnLizard);
-        scissors.setOnClickListener(this);
+        lizard.setOnClickListener(this);
         ImageButton spock = (ImageButton)findViewById(R.id.btnSpock);
-        scissors.setOnClickListener(this);
+        spock.setOnClickListener(this);
     }
 
     @Override
