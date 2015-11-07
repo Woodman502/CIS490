@@ -46,8 +46,11 @@ public class ListActivity extends ActionBarActivity {
         });
         // Enable Local Datastore.
         Parse.enableLocalDatastore(this);
-        Parse.initialize(this, "tTBmXNXyIfqdQzvW9SLpw2i5fBKuc60eYqxVzQcV", "0yk9YnCBjyi5jf96bsrrmMISgpK5Z4WDCQWZIjTz");
 
+        Parse.initialize(this, "IvaEeSgTE7H2iFjj9GbGh3UqHjl37Exm0UtDUlZW", "km1Ob5Xe6e52aGahnMABa8FaCzbLHheT6WuO15eU");
+        ParseObject testObject = new ParseObject("TestObject");
+        testObject.put("Parse", "tutorial");
+        testObject.saveInBackground();
         btnCreate = (Button) findViewById(R.id.btnCreate);
         btnCreate.setOnClickListener(new View.OnClickListener() {
 
