@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ChatApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="username">USERNAME</string>
+    <string name="password">PASSWORD</string>
+    <string name="title_activity_list_users">ListUsersActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="message_elipses">Message...</string>
+    <string name="logout">Logout</string>
+</resources>
