@@ -27,15 +27,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".LoginActivity2"
-            android:label="@string/title_activity_login2" >
-        </activity>
+
         <activity
             android:name=".ListUsersActivity"
             android:label="@string/title_activity_list_users"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <service android:name=".MessageService"></service>
     </application>
 
 </manifest>
