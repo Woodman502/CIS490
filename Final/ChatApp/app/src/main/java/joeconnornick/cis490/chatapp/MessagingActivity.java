@@ -1,11 +1,11 @@
 package joeconnornick.cis490.chatapp;
 
-import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -26,7 +26,7 @@ import com.sinch.android.rtc.messaging.WritableMessage;
 import java.util.Arrays;
 import java.util.List;
 
-public class MessagingActivity extends Activity {
+public class MessagingActivity extends AppCompatActivity {
 
     private String recipientId;
     private EditText messageBodyField;
