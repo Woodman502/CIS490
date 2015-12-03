@@ -74,13 +74,13 @@
                 android:id="@+id/loginButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button_login"/>
+                android:background="@drawable/button_login2"/>
 
             <Button
                 android:id="@+id/signupButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button_signup"/>
+                android:background="@drawable/button_signup2"/>
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
