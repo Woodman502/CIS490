@@ -1,8 +1,8 @@
 package joeconnornick.cis490.chatapp;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,7 +12,7 @@ import com.parse.LogInCallback;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends Activity {
 
     private Button signUpButton;
     private Button loginButton;
@@ -26,7 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+
         intent = new Intent(getApplicationContext(), ListUsersActivity.class);
         serviceIntent = new Intent(getApplicationContext(), MessageService.class);
 
@@ -96,8 +96,4 @@ public class LoginActivity extends AppCompatActivity {
         stopService(new Intent(this, MessageService.class));
         super.onDestroy();
     }
-
-
-
-
 }
