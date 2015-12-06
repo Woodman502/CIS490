@@ -5,7 +5,8 @@
     android:padding="10dp">
 
     <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-        android:layout_marginRight="10dp">
+        android:layout_marginRight="10dp"
+        android:padding="12dp">
 
         <TextView
             android:id="@+id/txtSender"
@@ -29,16 +30,15 @@
             android:paddingRight="2dp"
             android:paddingBottom="6dp"
             android:textSize="12sp"
-            android:text=""
             android:layout_alignBottom="@+id/txtSender"/>
 
         <RelativeLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/txtSender"
             android:layout_alignParentLeft="true"
-            android:padding="12dp"
-            android:background="@drawable/grey_bubble"
+
+            android:background="@drawable/blue_cloud"
             >
 
             <TextView
@@ -48,8 +48,10 @@
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/black"
                 android:textSize="14sp"
-                android:text="Hello"
-                />
+                android:text="Hellooooooo"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="18dp"
+                android:layout_marginLeft="16dp" />
 
         </RelativeLayout>
     </RelativeLayout>
