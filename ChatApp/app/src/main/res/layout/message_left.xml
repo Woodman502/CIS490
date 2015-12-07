@@ -38,7 +38,7 @@
             android:layout_below="@+id/txtSender"
             android:layout_alignParentLeft="true"
 
-            android:background="@drawable/blue_cloud"
+            android:background="@drawable/grey_cloud"
             >
 
             <TextView
