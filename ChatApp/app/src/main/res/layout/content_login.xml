@@ -78,7 +78,7 @@
     <Button
         android:id="@+id/loginButton"
         android:text="Login"
-        android:textColor="#0800FF"
+        android:textColor="@color/off_white"
         android:textSize="22sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -92,7 +92,7 @@
     <Button
         android:id="@+id/signupButton"
         android:text="Sign Up"
-        android:textColor="#0800FF"
+        android:textColor="@color/off_white"
         android:textSize="22sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
