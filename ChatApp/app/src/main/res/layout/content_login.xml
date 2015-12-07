@@ -9,59 +9,15 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_login" tools:context=".LoginActivity">
 
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="@string/username"
-            android:id="@+id/loginUsernameText"
-            android:layout_gravity="center_horizontal"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="20sp"/>
-        <EditText
-            android:id="@+id/loginUsername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:inputType="text"
-            android:textSize="32sp"
-            android:padding="10dp"
-            android:textColor="@color/colorPrimaryDark"
-            android:background="@drawable/inputbox"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp">
-            <requestFocus/>
-        </EditText>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="@string/password"
-            android:id="@+id/loginPasswordText"
-            android:layout_gravity="center_horizontal"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="20sp"/>
-        <EditText
-            android:id="@+id/loginPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="40dp"
-            android:inputType="textPassword"
-            android:textSize="32sp"
-            android:padding="10dp"
-            android:textColor="@color/colorPrimaryDark"
-            android:background="@drawable/inputbox"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp">
-        </EditText>
+        android:orientation="vertical"
+        android:id="@+id/linearLayout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        >
 
         <LinearLayout
             android:layout_width="262dp"
@@ -69,20 +25,89 @@
             android:orientation="horizontal"
             android:layout_marginBottom="40dp"
             android:layout_gravity="center"
-            android:weightSum="1">
+            android:weightSum="2">
 
-            <Button
-                android:id="@+id/loginButton"
-                android:layout_width="119dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button_login2"/>
-
-            <Button
-                android:id="@+id/signupButton"
-                android:layout_width="109dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button_signup2"
-                android:layout_weight="0.50" />
         </LinearLayout>
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="284dp"
+            android:layout_height="123dp"
+            android:src="@drawable/logo"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="40dp" />
+
+        <EditText
+            android:id="@+id/loginUsername"
+            android:layout_width="236dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:inputType="text"
+            android:textSize="22sp"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@drawable/inputbox"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_gravity="center_horizontal"
+            android:hint="Username">
+        </EditText>
+
+        <EditText
+            android:id="@+id/loginPassword"
+            android:layout_width="236dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="40dp"
+            android:inputType="textPassword"
+            android:textSize="22sp"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@drawable/inputbox"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_gravity="center_horizontal"
+            android:hint="Password"
+            >
+        </EditText>
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/loginButton"
+        android:text="Login"
+        android:textColor="#0800FF"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="1"
+        android:shadowDy="-1"
+        android:shadowRadius="0"
+        android:layout_gravity="left"
+        android:layout_marginRight="5sp" />
+    <Button
+        android:id="@+id/signupButton"
+        android:text="Sign Up"
+        android:textColor="#0800FF"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="1"
+        android:shadowDy="-1"
+        android:shadowRadius="0"
+        android:layout_gravity="right"
+        android:layout_marginLeft="5sp" />
+
+</LinearLayout>
+
+
+
     </LinearLayout>
+
 </RelativeLayout>

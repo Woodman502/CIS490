@@ -33,12 +33,12 @@
             />
 
         <RelativeLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/txtSender"
             android:layout_alignParentRight="true"
             android:padding="12dp"
-            android:background="@drawable/purple_bubble"
+            android:background="@drawable/yellow_cloud"
             >
 
             <TextView
@@ -46,11 +46,14 @@
                 android:paddingRight="12dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:textColor="@android:color/white"
+                android:layout_alignParentRight="false"
+                android:textColor="@android:color/black"
                 android:textSize="14sp"
                 android:text="Hello, how are you?"
-                />
+                android:layout_alignParentBottom="false"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="18dp" />
 
         </RelativeLayout>
     </RelativeLayout>
