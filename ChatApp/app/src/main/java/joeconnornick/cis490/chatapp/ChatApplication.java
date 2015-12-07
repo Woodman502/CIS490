@@ -1,5 +1,6 @@
 package joeconnornick.cis490.chatapp;
 
+
 import android.app.Application;
 
 import com.parse.Parse;
@@ -14,5 +15,6 @@ public class ChatApplication extends Application{
         super.onCreate();
         Parse.enableLocalDatastore(this);
         Parse.initialize(this, "s0f5UeOgUnnhFNsjsiPlh1nhaklHA1PWg42gpd2s", "0TSxQ3HEBaeyOccNALH38hl7erVPZXAIlzerVxRt");
+
     }
 }

@@ -1,7 +1,9 @@
 package joeconnornick.cis490.chatapp;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +24,7 @@ public class LoginActivity extends AppCompatActivity {
     private String password;
     private Intent intent;
     private Intent serviceIntent;
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +49,11 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                showSpinner();
+
                 username = usernameField.getText().toString();
                 password = passwordField.getText().toString();
+
 
                 ParseUser.logInInBackground(username, password, new LogInCallback() {
                     public void done(ParseUser user, com.parse.ParseException e) {
@@ -67,7 +73,6 @@ public class LoginActivity extends AppCompatActivity {
         signUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 username = usernameField.getText().toString();
                 password = passwordField.getText().toString();
 
@@ -90,7 +95,21 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+    public void showSpinner() {
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setTitle("Loading");
+        progressDialog.setMessage("Please wait...");
+        progressDialog.show();
 
+
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            public void run() {
+                progressDialog.dismiss();
+            }
+        }, 3000);
+
+    }
     @Override
     public void onDestroy() {
         stopService(new Intent(this, MessageService.class));

@@ -19,7 +19,8 @@ import com.sinch.android.rtc.messaging.WritableMessage;
 /**
  * Created by Joe Woodcox on 12/2/2015.
  */
-public class MessageService extends Service implements SinchClientListener{
+public class MessageService extends Service implements SinchClientListener {
+
     private static final String APP_KEY = "5edfbcd1-d86c-462c-af9d-2704f4526c3d";
     private static final String APP_SECRET = "dB9jFpUUIkuuy7Ug1tE9kQ==";
     private static final String ENVIRONMENT = "sandbox.sinch.com";
@@ -28,7 +29,7 @@ public class MessageService extends Service implements SinchClientListener{
     private MessageClient messageClient = null;
     private String currentUserId;
     private LocalBroadcastManager broadcaster;
-    private Intent broadcastIntent = new Intent("joeconnornick.cis490.chatpp.ListUsersActivity");
+    private Intent broadcastIntent = new Intent("joeconnornick.cis490.chatapp.ListUsersActivity");
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
