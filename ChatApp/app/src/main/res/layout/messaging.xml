@@ -44,7 +44,8 @@
             android:background="@android:color/white"
             android:layout_alignBottom="@+id/sendButton"
             android:layout_toLeftOf="@+id/sendButton"
-            android:layout_toStartOf="@+id/sendButton" />
+            android:layout_toStartOf="@+id/sendButton"
+            android:inputType="textShortMessage"/>
 
 
 
