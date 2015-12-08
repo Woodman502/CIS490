@@ -107,7 +107,7 @@ public class LoginActivity extends AppCompatActivity {
             public void run() {
                 progressDialog.dismiss();
             }
-        }, 3000);
+        }, 2000);
 
     }
     @Override
