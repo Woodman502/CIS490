@@ -13,11 +13,11 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,6 +28,19 @@ public class ListUsersActivity extends Activity {
     private ArrayList<String> names;
     private ListView usersListView;
     private Button logoutButton;
+
+
+    Integer[] imageId = {
+            R.drawable.image1,
+            R.drawable.image2,
+            R.drawable.image3,
+            R.drawable.image4,
+            R.drawable.image5,
+            R.drawable.image6,
+            R.drawable.image7,
+            R.drawable.image8,
+            R.drawable.image9
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +65,6 @@ public class ListUsersActivity extends Activity {
     private void setConversationsList() {
         currentUserId = ParseUser.getCurrentUser().getObjectId();
         names = new ArrayList<String>();
-
         ParseQuery<ParseUser> query = ParseUser.getQuery();
         query.whereNotEqualTo("objectId", currentUserId);
         query.findInBackground(new FindCallback<ParseUser>() {
@@ -60,12 +72,16 @@ public class ListUsersActivity extends Activity {
                 if (e == null) {
                     for (int i=0; i<userList.size(); i++) {
                         names.add(userList.get(i).getUsername().toString());
+
                     }
+
+
 
                     usersListView = (ListView)findViewById(R.id.usersListView);
                     namesArrayAdapter =
-                            new ArrayAdapter<String>(getApplicationContext(),
-                                    R.layout.user_list_item, names);
+                            new CustomList(ListUsersActivity.this, names, imageId);
+
+                   // ArrayAdapter<String>(R.layout.user_list_item, names);
                     usersListView.setAdapter(namesArrayAdapter);
 
                     usersListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -75,7 +91,8 @@ public class ListUsersActivity extends Activity {
                         }
                     });
 
-                } else {
+                }
+                else {
                     Toast.makeText(getApplicationContext(),
                             "Error loading user list",
                             Toast.LENGTH_LONG).show();

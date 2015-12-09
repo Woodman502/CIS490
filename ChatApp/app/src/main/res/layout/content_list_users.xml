@@ -17,14 +17,15 @@
         android:padding="5dp"
         android:background="#c9faf6"
         android:id="@+id/usersListView"
+        android:drawableLeft="@drawable/logo"
         android:layout_above="@+id/logoutButton">
     </ListView>
+
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/logout"
         android:id="@+id/logoutButton"
-
         android:background="#201f99"
         android:textSize="24sp"
         android:textColor="#ffe900"
