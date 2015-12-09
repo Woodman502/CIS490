@@ -27,11 +27,15 @@
         android:layout_height="wrap_content"
         android:text="@string/logout"
         android:id="@+id/logoutButton"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/buttonshape"
         android:textSize="24sp"
         android:textColor="@color/off_white"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textStyle="bold|italic"
+        android:typeface="sans"
+        android:clickable="false"
+        />
 
 </RelativeLayout>
