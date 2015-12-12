@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="false"
                 android:textColor="@android:color/black"
-                android:textSize="14sp"
+                android:textSize="30sp"
                 android:text="Hello, how are you?"
                 android:layout_alignParentBottom="false"
                 android:layout_centerVertical="true"
